@@ -15,15 +15,15 @@ def x_train(json, json1):
     plushauts = listgetter.listplushaut(json1)
     vol = listgetter.listvol(json1)
     x=resizer.dataformater(fandg, dernier, ouv, plusbas, plushauts, vol)
-    return serialconverter.serialencoderm3(x)
-
+#    return serialconverter.serialencoderm3(x)
+    return x
 
 def y_train(json):
     plusbas = listgetter.listplusbas(json)
     plushauts = listgetter.listplushaut(json)
     x=resizer.resultformater(plusbas, plushauts)
-    return serialconverter.serialencoder(x)
-
+    #    return serialconverter.serialencoder(x)
+    return x
 
 def x_test(json,json1):
     fandg = function.functiontest(json)
@@ -33,11 +33,12 @@ def x_test(json,json1):
     plushauts = listgetter.listplushaut(json1)
     vol = listgetter.listvol(json1)
     x=resizer.dataformater(fandg, dernier, ouv, plusbas, plushauts, vol)
-    return serialconverter.serialencoderm3(x)
-
+    #    return serialconverter.serialencoderm3(x)
+    return x
 
 def y_test(json):
     plusbas = listgetter.listplusbas(json)
     plushauts = listgetter.listplushaut(json)
     x=resizer.resultformater(plusbas, plushauts)
-    return serialconverter.serialencoder(x)
+    #   return serialconverter.serialencoder(x)
+    return x
